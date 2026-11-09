@@ -1,0 +1,30 @@
+{
+  "name": "curso-de-nodejs_udemy_usuario-de-riward",
+  "$schema": "https://json.schemastore.org/package.json",
+  "version": "1.0.0",
+  "description": "Este es el curso de Udemy de nodeJS",
+  "license": "ISC",
+  "author": "Jesús Rivas",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon main.js",
+    "css": "npx @tailwindcss/cli -i ./public/css/tailwind_input.css -o ./public/css/app.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.1",
+    "mysql2": "^3.19.0",
+    "nodemailer": "^9.0.5",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "nodemon": "^3.1.11"
+  }
+}

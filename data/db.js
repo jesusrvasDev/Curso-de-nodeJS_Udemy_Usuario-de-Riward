@@ -1,0 +1,21 @@
+import Sequelize from 'sequelize'
+import dotenv from 'dotenv'
+dotenv.config({path:'.env'})   // Con esta linea indico cual es el archivo de configuración de las variables de entorno
+
+const db = new Sequelize(process.env.BD_NOMBRE,process.env.BD_USER,process.env.BD_PASSWORD,{
+    host:process.env.BD_HOST,
+    port:3306,
+    dialect:'mysql',
+    define: {
+        timestamps:true
+    },
+    pool:{
+        max:5,
+        min:0,
+        acquiere:30000,
+        idle:10000
+    },
+    operatorAliases: false
+});
+
+export default db;
